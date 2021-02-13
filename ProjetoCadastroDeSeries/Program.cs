@@ -1,4 +1,5 @@
 ﻿using System;
+using ProjetoCadastroDeSeries.Classes;
 
 namespace ProjetoCadastroDeSeries
 {
@@ -6,7 +7,7 @@ namespace ProjetoCadastroDeSeries
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            EntidadeBase minhaClasse = new EntidadeBase();
         }
     }
 }
