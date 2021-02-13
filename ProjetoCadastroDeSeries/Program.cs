@@ -7,7 +7,11 @@ namespace ProjetoCadastroDeSeries
     {
         static void Main(string[] args)
         {
-            EntidadeBase minhaClasse = new EntidadeBase();
+            //EntidadeBase minhaClasse = new EntidadeBase(); //classe abstrata nao pode ser Instanciada !!!
+
+            Serie MeuObjeto = new Serie();
+
+            
         }
     }
 }

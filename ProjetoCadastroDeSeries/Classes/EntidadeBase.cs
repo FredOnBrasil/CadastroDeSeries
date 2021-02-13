@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ProjetoCadastroDeSeries.Classes
+﻿namespace ProjetoCadastroDeSeries.Classes
 {
-    public abstract class EntidadeBase
+    public abstract class EntidadeBase //útil para reutilizacao de implementação
     {
-        public int Id { get; protected set; }
+        protected int Id { get; set; }
     }
 }
