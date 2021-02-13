@@ -10,14 +10,16 @@ namespace ProjetoCadastroDeSeries
         private String Titulo { get; set; }
         private String Descricao { get; set; }
         private int Ano { get; set; }
+        private bool Excluido { get; set; } //indica se registro esta excluido ou não
 
         //--construtor da classe serie 
-        public Serie(Genero genero, string titulo, string descricao, int ano)
+        public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
             Genero = genero;
             Titulo = titulo;
             Descricao = descricao;
-            Ano = ano;  
+            Ano = ano;
+            Excluido = false;
         }
 
         //--- overrite do metodo tostring para retorno de string formatada com os dados
@@ -28,10 +30,11 @@ namespace ProjetoCadastroDeSeries
             retorno += "Titulo: " + Titulo + Environment.NewLine;
             retorno += "Descrição: " + Descricao + Environment.NewLine;
             retorno += "Ano de Início: " + Ano + Environment.NewLine;
+            retorno += "Excluído: " + Excluido + Environment.NewLine;
             return retorno;
         }
 
-        //--- metodos de retorno dos dados titulo / id(herdados da classe base)
+        //--- metodos de retorno dos dados titulo / id(herdados da classe base) / exclui / retorna status excluido
         public string retornaTitulo()
         {
             return Titulo;
@@ -40,6 +43,16 @@ namespace ProjetoCadastroDeSeries
         public int retornaId()
         {
             return this.Id;
+        }
+
+        public void Excluir()
+        {
+            Excluido = true;
+        }
+
+        public bool retornaExcluido()
+        {
+            return Excluido;
         }
     }
 }

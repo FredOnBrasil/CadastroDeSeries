@@ -12,11 +12,11 @@ namespace ProjetoCadastroDeSeries.Interfaces
 
         T RetornaPorId(int id); //retorna um T ao passar um id por parametro 
 
-        void Insere(T entidade); //metodo p inserir
+        void Insere(T objetoSerie); //metodo p inserir
 
         void exclui(int id); //metodo para excluir
 
-        void Atualiza(int id, T entidade); //metodo para atualizar
+        void Atualiza(int id, T objetoSerie); //metodo para atualizar
 
         int ProximoId(); //retorna o proximo id
     }

@@ -2,6 +2,6 @@
 {
     public abstract class EntidadeBase //útil para reutilizacao de implementação
     {
-        protected int Id { get; set; }
+        public int Id { get; protected set; }
     }
 }

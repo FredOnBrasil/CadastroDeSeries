@@ -1,42 +1,42 @@
 ﻿using ProjetoCadastroDeSeries.Interfaces;
 using System.Collections.Generic;
 
-namespace ProjetoCadastroDeSeries.Classes
+namespace ProjetoCadastroDeSeries
 {
     public class SerieRepositorio : IRepositorio<Serie> //classe repositorio implementa um repositorio da classe series
     {
-        //implementacao da lista que contem todas as series
+        //implementacao da variavel lista que contem todas as series
         private List<Serie> listaSerie = new List<Serie>();
 
         //implementação dos metodos:
-        public void Atualiza(int id, Serie entidade)
+        public void Atualiza(int id, Serie objetoSerie)
         {
-            throw new System.NotImplementedException();
+            listaSerie[id] = objetoSerie;
         }
 
         public void exclui(int id)
         {
-            throw new System.NotImplementedException();
+            listaSerie[id].Excluir(); //apenas marca o id como excluido na lista de series(não exclui de fato)
         }
 
-        public void Insere(Serie entidade)
+        public void Insere(Serie objetoSerie)
         {
-            throw new System.NotImplementedException();
+            listaSerie.Add(objetoSerie);
         }
 
         public List<Serie> Lista()
         {
-            throw new System.NotImplementedException();
+            return listaSerie;
         }
 
         public int ProximoId()
         {
-            throw new System.NotImplementedException();
+            return listaSerie.Count;
         }
 
         public Serie RetornaPorId(int id)
         {
-            throw new System.NotImplementedException();
+            return listaSerie[id];
         }
     }
 }
