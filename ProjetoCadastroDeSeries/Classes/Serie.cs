@@ -3,7 +3,7 @@ using ProjetoCadastroDeSeries.Classes;
 
 namespace ProjetoCadastroDeSeries
 {
-    class Serie : EntidadeBase
+    public class Serie : EntidadeBase
     {
         //--- atributos
         private Genero Genero { get; set; }
